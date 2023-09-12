@@ -115,3 +115,19 @@ const ChinaMap = () => {
 在这个例子中，我们首先使用 D3 的 `select` 方法选择 SVG 元素，并创建一个地理投影 `projection`，用于将地理坐标转换为屏幕坐标。
 然后，我们创建一个路径生成器 `pathGenerator`，它将根据地理投影生成路径。
 
+最后svg来渲染:
+```
+import React from 'react';
+import ChinaMap from './ChinaMap';
+
+const App = () => {
+  return (
+    <div className="App">
+      <h1>China Map</h1>
+      <ChinaMap />
+    </div>
+  );
+};
+
+export default App;
+````
