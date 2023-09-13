@@ -37,14 +37,25 @@ const ChinaMap = () => {
       .data(features)
       .join('path')
       .attr('d', path)
-      .attr('fill', (d) => (d._entering ? 'steelblue' : 'tomato'))
+      //.attr('fill', (d) => (d._entering ? 'steelblue' : 'tomato'))
+      //.transition()
+      //.attr('fill-opacity', 0.8)
+      //// 添加边框样式
+      //// 边框颜色
+      //.style('stroke', 'black')
+      //// 边框宽度
+      //.style('stroke-width', '1px');
+
       .transition()
       .attr('fill-opacity', 0.8)
-      // 添加边框样式
-      // 边框颜色
       .style('stroke', 'black')
-      // 边框宽度
-      .style('stroke-width', '1px');
+      .style('stroke-width', '1px')
+      .attr('fill', (d, i) => {
+        // 根据省份的索引（i）设置不同的颜色
+        // 这里可以自定义颜色映射
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'];
+        return colors[i % colors.length];
+      });
   }, []);
 
   return (
