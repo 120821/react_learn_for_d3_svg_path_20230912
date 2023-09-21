@@ -3,6 +3,7 @@ import MyComponent from './MyComponent';
 import MapComponent from './MapComponent';
 import SomeMaps from './SomeMaps';
 import ChinaMap from './ChinaMap';
+import GridData from './GridData';
 import ToShowSomeMaps from './ToShowSomeMaps';
 //import ColorCardMap from './ColorCardMap';
 //import NewTooltip from './NewTooltip';
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <GridData />
         <p>map</p>
         <ToShowSomeMaps realData={realData}/>
         <p>map</p>
