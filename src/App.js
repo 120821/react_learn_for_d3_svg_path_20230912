@@ -2,6 +2,7 @@ import './App.css';
 import MyComponent from './MyComponent';
 import MapComponent from './MapComponent';
 import SomeMaps from './SomeMaps';
+import RerenderExample from './RerenderExample';
 import ChinaMap from './ChinaMap';
 import GridData from './GridData';
 import ToShowSomeMaps from './ToShowSomeMaps';
@@ -22,8 +23,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <GridData />
+        <RerenderExample />
         <p>map</p>
+        <GridData />
         <ToShowSomeMaps realData={realData}/>
         <p>map</p>
         <ToShowSomeMaps realData={realData}/>
