@@ -45,7 +45,14 @@ const PopulationGridColor = ({ data }) => {
   };
 
   return (
-    <GridLayout className="layout" cols={4} rowHeight={100} width={800}>
+    <GridLayout
+      className="layout"
+      cols={4}
+      rowHeight={100}
+      width={800}
+      draggableCancel=".grid-item"
+      resizableCancel=".grid-item"
+    >
       {renderGridItems()}
     </GridLayout>
   );
