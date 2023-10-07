@@ -13,8 +13,12 @@ const GridMap = () => {
     const projection = d3.geoMercator()
       .scale(800)
       .fitSize([300, 300], chinaData);
-      //.fitSize([100, 100], chinaData);
     const path = d3.geoPath().projection(projection);
+    //const projection = d3.geoMercator()
+    //  .scale(100) // 调整缩放比例
+    //  .translate([4, 4]) // 调整地图位置
+    //  .fitSize([200, 200], chinaData); // 调整容器尺寸
+    //const path = d3.geoPath().projection(projection);
 
     // 绘制地图路径
     svg.selectAll("path")
@@ -23,21 +27,20 @@ const GridMap = () => {
       .append("path")
       .attr("d", path)
       // 地图的border
-      .attr("stroke", "blue")
+      //.attr("stroke", "blue")
       //  背景色: 整个地图
       .attr("fill", "none");
 
     // 创建网格
-    const grid = d3.geoGraticule();
+    //const grid = d3.geoGraticule();
 
     // 绘制网格路径
     svg.append("path")
-      .datum(grid())
+     // .datum(grid())
       .attr("d", path)
       .attr("stroke", "#ddd")
       .attr("fill", "none");
 
-    // 这里添加之前转换的 JSX 代码
     d3.csv(chinaPopulationData).then((csv_data) => {
 
       let areas = [];
