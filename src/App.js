@@ -34,12 +34,12 @@ function App() {
   //  // 更多省份的人口数据...
   //};
 
+  //<GridMapComponent />
   return (
     <div className="App">
       <header className="App-header">
-
-        <GridMapComponent />
         <GridMap />
+
 
         <RerenderExample />
         <p>map</p>
@@ -53,9 +53,6 @@ function App() {
         <ToShowSomeMaps realData={realData}/>
         <p>map</p>
         <ToShowSomeMaps realData={realData}/>
-
-
-
 
 
         <MapComponent mapData={chinaGeoJson} fill="steelblue" stroke="white" />
