@@ -7,13 +7,17 @@ import ChinaMap from './ChinaMap';
 import GridData from './GridData';
 import ToShowSomeMaps from './ToShowSomeMaps';
 
-import PopulationGrid from './PopulationGrid';
-import PopulationGridColor from './PopulationGridColor';
+//import PopulationGrid from './PopulationGrid';
+//import PopulationGridColor from './PopulationGridColor';
+import GridMap from './GridMap';
+import GridMapComponent from './GridMapComponent';
 
 //import ColorCardMap from './ColorCardMap';
 //import NewTooltip from './NewTooltip';
 import chinaGeoJson from './china.json'; // 将路径替换为您的地图数据文件路径
 
+//<PopulationGrid data={populationData} />
+//<PopulationGridColor data={populationData} />
 function App() {
   const realData = [
     { province: '北京', emission: 500 },
@@ -24,18 +28,18 @@ function App() {
     { province: '黑龙江', emission: 100 },
   ];
 
-  const populationData = {
-    A: 1000000, // 第一个省份的人口数据
-    B: 2000000, // 第二个省份的人口数据
-    // 更多省份的人口数据...
-  };
+  //const populationData = {
+  //  A: 1000000, // 第一个省份的人口数据
+  //  B: 2000000, // 第二个省份的人口数据
+  //  // 更多省份的人口数据...
+  //};
 
   return (
     <div className="App">
       <header className="App-header">
 
-        <PopulationGrid data={populationData} />
-        <PopulationGridColor data={populationData} />
+        <GridMapComponent />
+        <GridMap />
 
         <RerenderExample />
         <p>map</p>
