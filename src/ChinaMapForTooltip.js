@@ -29,7 +29,7 @@ const ChinaMapForTooltip = () => {
       .attr('stroke', 'white')
       .attr('stroke-width', 0.8)
       .on('mouseover', handleMouseOver)
-      .on('mouseout', handleMouseOut);
+      .on('mouseout', handleMouseOut)
 
     // 处理鼠标悬停事件
     function handleMouseOver(event, d) {
@@ -40,8 +40,8 @@ const ChinaMapForTooltip = () => {
       // 这里使用了示例的工具提示样式，你可以根据需要自定义样式
       svg.append('text')
         .attr('id', 'tooltip')
-        .attr('x', event.pageX + 10)
-        .attr('y', event.pageY - 10)
+        .attr('x', event.pageX - 80)
+        .attr('y', event.pageY - 180)
         .text(d.properties.name)
         .style('fill', 'white'); // 设置字体颜色为白色
     }
