@@ -6,6 +6,7 @@ import RerenderExample from './RerenderExample';
 import ChinaMap from './ChinaMap';
 import GridData from './GridData';
 import ToShowSomeMaps from './ToShowSomeMaps';
+import ChinaMapForTooltip from './ChinaMapForTooltip';
 
 //import PopulationGrid from './PopulationGrid';
 //import PopulationGridColor from './PopulationGridColor';
@@ -39,6 +40,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <GridMap />
+        <ChinaMapForTooltip />
 
 
         <RerenderExample />
