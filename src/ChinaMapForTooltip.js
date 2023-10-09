@@ -11,9 +11,9 @@ const ChinaMapForTooltip = () => {
 
     // 创建投影函数
     const projection = d3.geoMercator()
-      .center([105, 38])
-      .scale(600)
-      .fitSize([800, 800], chinaData);
+      //.center([15, 18])
+      .scale(200)
+      //.fitSize([800, 800], chinaData);
 
     // 创建路径生成器
     const path = d3.geoPath()
@@ -42,7 +42,8 @@ const ChinaMapForTooltip = () => {
         .attr('id', 'tooltip')
         .attr('x', event.pageX + 10)
         .attr('y', event.pageY - 10)
-        .text(d.properties.name);
+        .text(d.properties.name)
+        .style('fill', 'white'); // 设置字体颜色为白色
     }
 
     // 处理鼠标离开事件
@@ -56,7 +57,7 @@ const ChinaMapForTooltip = () => {
   }, []);
 
   return (
-    <svg ref={mapRef} width={1000} height={500} />
+    <svg ref={mapRef} width={1500} height={1000} />
   );
 };
 
