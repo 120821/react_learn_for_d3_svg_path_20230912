@@ -131,3 +131,90 @@ const App = () => {
 
 export default App;
 ````
+
+
+### 部署本项目
+ubuntu 22.04 安装React node yarn 然后启动
+1. 确保有 nvm
+```
+nvm --version
+0.39.5
+```
+2. 使用nvm 安装
+```
+nvm install 20.5.0
+```
+
+切换：
+```
+nvm use 20.5.0
+```
+
+查看：
+```
+node -v
+```
+
+更新npm 与node匹配:
+```
+npm install -g npm@latest
+```
+
+查看：
+```
+npm -v
+```
+
+3.安装yarn:
+```
+sudo apt install yarn
+```
+如果出现：
+```
+node -v
+v0.10.37
+meiyi@meiyi-Extensa-2511G:~/workspace$ npx create-react-app my-app
+
+/usr/share/nodejs/npm/bin/npx-cli.js:23
+...removedSwitches,
+^
+SyntaxError: Unexpected token .
+at Module._compile (module.js:439:25)
+at Object.Module._extensions..js (module.js:474:10)
+at Module.load (module.js:356:32)
+at Function.Module._load (module.js:312:12)
+at Function.Module.runMain (module.js:497:10)
+at startup (node.js:119:16)
+at node.js:935:3
+```
+
+可以清除缓存：
+```
+  运行sudo apt remove cmdtest命令，将已安装的"cmdtest"软件包卸载掉。
+  运行sudo apt autoremove命令，删除不再需要的自动安装的软件包。
+  运行sudo apt update命令，更新软件包列表。
+  运行sudo apt install yarn命令，重新安装Yarn。
+```
+如果出现：
+```
+
+Setting up cmdtest (0.32.14.gcdfe14e-2) ...
+Processing triggers for man-db (2.10.2-1) ...
+meiyi@meiyi-Extensa-2511G:~/workspace/react_learn_for_d3_svg_path_20230912$ yarn -v
+ERROR: There are no scenarios; must have at least one.
+```
+需要重新安装：
+```
+sudo apt install yarn
+```
+也可能是因为软件源问题：
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install yarn
+```
+4.启动项目：
+```
+yarn start
+```
