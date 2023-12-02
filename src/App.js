@@ -7,15 +7,17 @@ import ChinaMap from './ChinaMap';
 import GridData from './GridData';
 import ToShowSomeMaps from './ToShowSomeMaps';
 import ChinaMapForTooltip from './ChinaMapForTooltip';
+import DrawChinaMapBorderOnly from './DrawChinaMapBorderOnly';
+import ChinaMapBorder from './chinaMapBorder';
 
 //import PopulationGrid from './PopulationGrid';
 //import PopulationGridColor from './PopulationGridColor';
 import GridMap from './GridMap';
-import GridMapComponent from './GridMapComponent';
+//import GridMapComponent from './GridMapComponent';
 
 //import ColorCardMap from './ColorCardMap';
 //import NewTooltip from './NewTooltip';
-import chinaGeoJson from './china.json'; // 将路径替换为您的地图数据文件路径
+import chinaGeoJson from './china.json';
 
 //<PopulationGrid data={populationData} />
 //<PopulationGridColor data={populationData} />
@@ -39,10 +41,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <DrawChinaMapBorderOnly />
         <GridMap />
-        <ChinaMapForTooltip />
+        <ChinaMapForTooltip fill="steelblue"/>
 
 
+        <ChinaMapBorder />
         <RerenderExample />
         <p>map</p>
         <GridData />
@@ -55,7 +59,6 @@ function App() {
         <ToShowSomeMaps realData={realData}/>
         <p>map</p>
         <ToShowSomeMaps realData={realData}/>
-
 
         <MapComponent mapData={chinaGeoJson} fill="steelblue" stroke="white" />
         <MapComponent mapData={chinaGeoJson} fill="green" stroke="white" />
